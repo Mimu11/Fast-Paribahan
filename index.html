@@ -13,7 +13,7 @@
 </head>
 
 <body class="raleway-font lg:container bg-[#F7F8F8] lg:mx-auto ">
-    <header>
+    <header id="header-section">
         <!-- nav -->
         <nav>
             <div class="navbar bg-base-100">
@@ -62,7 +62,8 @@
                 </h1>
                 <p class="text-white font-semibold text-xl">Yes, you can run unit tests and view the results
                     directly within the app. The integrated testing features allow for a streamlined .</p>
-                <button class="btn bg-[#1DD100] text-black text-2xl font-bold">Buy Tickets</button>
+                <button onclick="showTicketSection()" class="btn bg-[#1DD100] text-black text-2xl font-bold">Buy
+                    Tickets</button>
 
             </div>
         </section>
@@ -94,7 +95,7 @@
                         <img src="images/cupon-devider.png" alt="">
                     </div>
                     <div class="space-y-2">
-                        <h2 class="font-bold text-3xl">Couple 20</h2>
+                        <h2 class="font-bold text-3xl">Couple20</h2>
                         <p class="font-medium text-xl text-[#030712ab]">Coupon Code</p>
                     </div>
 
@@ -107,7 +108,7 @@
         </section>
     </header>
     <!-- Main section -->
-    <main>
+    <main id="main-section">
         <!-- tickets section -->
         <section>
             <div class="text-center space-y-8 my-20">
@@ -186,9 +187,10 @@
 
             </div>
         </section>
+        <!-- seat section -->
         <section>
             <div class="flex flex-col lg:flex-row mt-6 justify-evenly divide-dotted divide-x-8">
-                <!-- seat section -->
+
                 <div class="seat-container">
                     <div>
                         <h3 class="text-2xl font-semibold">Select Your Seat</h3>
@@ -222,7 +224,8 @@
                                         <p>A</p>
                                     </div>
 
-                                    <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">A1</div>
+                                    <div id="seat" class=" btn lg:w-[100px] bg-gray-400 text-xl  font-medium">
+                                        A1</div>
                                 </div>
                                 <div class="flex gap-8 items-center">
                                     <div>
@@ -243,7 +246,8 @@
                                         <p>D</p>
                                     </div>
 
-                                    <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">D1</div>
+                                    <div onclick="background" id="seat"
+                                        class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">D1</div>
                                 </div>
                                 <div class="flex gap-8 items-center">
                                     <div>
@@ -290,7 +294,7 @@
 
 
                             </div>
-                            <div class="flex flex-col gap-6 text-xl font-medium ">
+                            <div class=" flex flex-col gap-6 text-xl font-medium ">
                                 <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">A2</div>
                                 <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">B2</div>
                                 <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">C2</div>
@@ -340,7 +344,7 @@
                         <h3 class="text-2xl mt-8 lg:mt-0 font-semibold">Select Your Seat</h3>
                         <div class="flex flex-col divide-y-8  mt-6 gap-5">
                             <div class="flex justify-between">
-                                <h4 class="text-xl font-medium">Seat <span
+                                <h4 class="text-xl font-medium">Seat <span id="current-seat"
                                         class="bg-[#1DD100] rounded-2xl px-2">0</span>
                                 </h4>
                                 <h4 class="text-xl lg:mr-8 font-medium">Class</h4>
@@ -363,7 +367,8 @@
                                     <h4 class="text-xl font-medium">Total price</h4>
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-medium">BDT <span class="text-2xl font-medium">1100</span>
+                                    <h4 class="text-xl font-medium">BDT <span id="current-price"
+                                            class="text-2xl font-medium">0</span>
                                     </h4>
                                 </div>
                             </div>
@@ -371,18 +376,19 @@
                         </div>
                         <div class="flex justify-between my-6">
                             <div>
-                                <input class="bg-slate-200 lg:w-[330px] py-3 rounded-lg text-center" type="text"
-                                    placeholder="Have any copupon?">
+                                <input class="bg-slate-200 lg:w-[330px] py-3 rounded-lg text-center" id="coupon"
+                                    type="text" placeholder="Have any coupon?">
                             </div>
                             <div>
-                                <button class="btn w-auto bg-[#1DD100]"> Apply</button>
+                                <button id="apply-coupon" class="btn w-auto bg-[#1DD100]"> Apply</button>
                             </div>
 
 
                         </div>
                         <div class="flex justify-between my-6">
                             <div class="text-xl font-medium">Grand Total</div>
-                            <div class="text-xl font-medium">BDT <span class="text-xl font-medium">1100</span></div>
+                            <div class="text-xl font-medium">BDT <span id="grand-value"
+                                    class="text-xl font-medium">0</span></div>
                         </div>
                         <div class="space-y-6">
                             <h4 class="text-xl font-medium">Passenger Name*</h4>
@@ -396,7 +402,7 @@
                                 placeholder="Enter your email id">
 
                         </div>
-                        <button class="btn my-6 w-full bg-[#1DD100]">Next</button>
+                        <button onclick="successConfirmation()" class="btn my-6 w-full bg-[#1DD100]">Next</button>
                         <a class="underline" href="">Terms and Conditions</a>
                         <a class="underline ml-4" href="">Cancellation Policy</a>
                     </div>
@@ -405,7 +411,7 @@
         </section>
     </main>
     <!-- success section -->
-    <section class="hidden">
+    <section id="success-section" class=" hidden">
         <div class="flex flex-col mx-auto lg:my-32 lg:w-[500px] bg-slate-300 space-y-8 p-8 items-center">
             <img src="images/success.png" alt="">
             <h2 class="text-2xl font-bold text-[#27AE60]">SUCCESS</h2>
@@ -413,11 +419,11 @@
                 We are working hard to find the best service and deals for you.
             </p>
             <p class="text-xl text-center font-light">Shortly you will find a confirmation in your email.</p>
-            <button class="btn text-white px-20 bg-[#27AE60]">Continue</button>
+            <button onclick="homeSection()" class="btn text-white px-20 bg-[#27AE60]">Continue</button>
         </div>
     </section>
     <!-- footer section -->
-    <footer>
+    <footer id="footer-section">
         <footer class=" bg-slate-800 mt-8 text-white p-10">
             <div class="flex gap-6  flex-col lg:flex-row items-center justify-between">
                 <div>
@@ -431,6 +437,8 @@
             </div>
         </footer>
     </footer>
+    <script src="scripts/utilities.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 
 </html>
