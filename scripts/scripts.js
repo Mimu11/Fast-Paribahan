@@ -17,25 +17,29 @@ function homeSection() {
     showElementById('main-section');
     showElementById('footer-section');
     showTicketSectionByClick('main-section');
+    hideElementById('success-section');
 }
 // set bg tickets
 
-const seats = document.querySelectorAll('#seat');
-seats.forEach(seat => {
-    seat.addEventListener('click', () => {
-        seat.classList.toggle('bg-green-400');
+const myNodelist = document.querySelectorAll("#seat");
+for (let i = 0; i < myNodelist.length; i++) {
+    const nodeItems = myNodelist[i];
+    nodeItems.addEventListener('click', function () {
+        // background button by click.....
+        nodeItems.classList.toggle('bg-green-400');
 
+        // calculate total price......
         const currentSeat = document.getElementById('current-seat');
         const valueText = currentSeat.innerText;
         const value = parseInt(valueText);
-        if (seat) {
+        if (nodeItems) {
             const updateSeat = value + 1;
             currentSeat.innerText = updateSeat;
             const totalPrice = updateSeat * 550;
             const currentPrice = document.getElementById('current-price');
             currentPrice.innerText = totalPrice;
 
-            // Apply coupon code
+            // Apply coupon code......
             const applyCoupon = document.getElementById('apply-coupon');
             applyCoupon.addEventListener('click', function () {
                 const getCoupon = document.getElementById('coupon').value;
@@ -55,12 +59,27 @@ seats.forEach(seat => {
                     const grandValue = document.getElementById('grand-value');
                     grandValue.innerText = discountedPrice;
                 }
-
-
             })
-
         }
+    })
+}
 
-    });
-});
+// Tickets left.......
+
+for (let i = 0; i < myNodelist.length; i++) {
+    const nodeItems = myNodelist[i];
+
+    nodeItems.addEventListener('click', function () {
+        const currentSeatLeft = document.getElementById('seat-left');
+        const valueText = currentSeatLeft.innerText;
+        const value = parseInt(valueText);
+        if (nodeItems) {
+            const updateSeat = value - 1;
+            currentSeatLeft.innerText = updateSeat;
+        }
+    })
+};
+
+
+
 
