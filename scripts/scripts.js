@@ -45,7 +45,7 @@ for (let i = 0; i < myNodelist.length; i++) {
                 const getCoupon = document.getElementById('coupon').value;
                 const couponCode = 'NEW15';
                 const coupleCouponCode = 'Couple20';
-                if (getCoupon === couponCode) {
+                if (getCoupon === couponCode && value >= 3) {
 
                     const discount = totalPrice * 15 / 100;
                     const discountedPrice = totalPrice - discount;
@@ -53,7 +53,7 @@ for (let i = 0; i < myNodelist.length; i++) {
                     grandValue.innerText = discountedPrice;
                 }
 
-                if (getCoupon === coupleCouponCode) {
+                if (getCoupon === coupleCouponCode && value >= 3) {
                     const discount = totalPrice * 20 / 100;
                     const discountedPrice = totalPrice - discount;
                     const grandValue = document.getElementById('grand-value');
