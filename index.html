@@ -54,8 +54,8 @@
         </nav>
         <!-- Banner -->
         <section
-            class="flex flex-col justify-center items-center min-h-screen bg-[url(images/banner.png)] rounded-3xl lg:bg-cover bg-no-repeat mt-4 ">
-            <div class="text-center w-3/4 space-y-8 ">
+            class="flex flex-col justify-center items-center lg:min-h-screen bg-[url(images/banner.png)] rounded-3xl lg:bg-cover bg-no-repeat mt-4 ">
+            <div class="text-center p-4 w-3/4 space-y-8 ">
                 <h1 class="font-extrabold text-3xl lg:text-6xl text-white">End-to-End Travel with <br>
                     <span class="text-[#1DD100]"> Fast
                         Paribahan</span>
@@ -70,7 +70,7 @@
         <!-- coupon section -->
         <section class="coupon">
             <h1 class="font-bold text-5xl mt-8 lg:mt-20 text-center">Best offers for you</h1>
-            <div class="flex flex-col lg:flex-row gap-8 mt-12 justify-evenly ">
+            <div class="flex flex-col lg:flex-row mx-2 gap-8 mt-12 justify-evenly ">
                 <div class="bg-[#FFBF0F] px-4 rounded-3xl flex w-full justify-evenly items-center">
                     <div class="space-y-2">
                         <h2 class="text-3xl lg:text-5xl font-black">15% OFF</h2>
@@ -85,8 +85,8 @@
                         <p class="font-medium text-xl text-[#030712ab]">Coupon Code</p>
                     </div>
                 </div>
-                <div class="bg-[#F78C9C] px-4 w-full rounded-3xl flex justify-evenly items-center">
-                    <div class="space-y-2">
+                <div class="bg-[#F78C9C] h-full w-full rounded-3xl flex justify-evenly items-center">
+                    <div class="space-y-2 px-2">
                         <h2 class="text-3xl lg:text-5xl font-black">20% OFF</h2>
                         <p class="font-semibold text-xl">on your next purchase</p>
                         <p class="font-medium text-xl text-[#030712ab]">use by January 2024</p>
@@ -94,8 +94,8 @@
                     <div>
                         <img src="images/cupon-devider.png" alt="">
                     </div>
-                    <div class="space-y-2">
-                        <h2 class="font-bold text-3xl">Couple20</h2>
+                    <div class=" space-y-2">
+                        <h2 class="font-bold text-2xl">Couple20</h2>
                         <p class="font-medium text-xl text-[#030712ab]">Coupon Code</p>
                     </div>
 
@@ -216,83 +216,32 @@
                     <div class="flex justify-end">
                         <img class="w-20 mr-10 lg:mr-0 mb-4" src="images/wheel.png" alt="">
                     </div>
-                    <div class="flex justify-center items-center lg:gap-14">
+                    <div class="flex justify-center items-center">
                         <div class="flex lg:gap-5 ">
-                            <div class="flex  flex-col gap-6 text-xl font-medium ">
-                                <div class="flex gap-8 items-center">
-                                    <div>
-                                        <p>A</p>
-                                    </div>
-
-                                    <div id="seat" class=" btn lg:w-[100px] bg-gray-400 text-xl  font-medium">
-                                        A1</div>
-                                </div>
-                                <div class="flex gap-8 items-center">
-                                    <div>
-                                        <p>B</p>
-                                    </div>
-
-                                    <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">B1</div>
-                                </div>
-                                <div class="flex gap-8 items-center">
-                                    <div>
-                                        <p>C</p>
-                                    </div>
-
-                                    <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">C1</div>
-                                </div>
-                                <div class="flex gap-8 items-center">
-                                    <div>
-                                        <p>D</p>
-                                    </div>
-
-                                    <div onclick="background" id="seat"
-                                        class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">D1</div>
-                                </div>
-                                <div class="flex gap-8 items-center">
-                                    <div>
-                                        <p>E</p>
-                                    </div>
-
-                                    <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">E1</div>
-                                </div>
-                                <div class="flex gap-8 items-center">
-                                    <div>
-                                        <p>F</p>
-                                    </div>
-
-                                    <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">F1</div>
-                                </div>
-                                <div class="flex gap-8 items-center">
-                                    <div>
-                                        <p>G</p>
-                                    </div>
-
-                                    <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">G1</div>
-                                </div>
-                                <div class="flex gap-8 items-center">
-                                    <div>
-                                        <p>H</p>
-                                    </div>
-
-                                    <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">H1</div>
-                                </div>
-                                <div class="flex gap-10 items-center">
-                                    <div>
-                                        <p>I</p>
-                                    </div>
-
-                                    <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">I1</div>
-                                </div>
-                                <div class="flex gap-9 items-center">
-                                    <div>
-                                        <p>J</p>
-                                    </div>
-
-                                    <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">J1</div>
-                                </div>
-
-
+                            <div class="flex mr-4 items-center flex-col gap-10 mt-3  text-2xl  font-medium">
+                                <h3>A</h3>
+                                <h3>B</h3>
+                                <h3>C</h3>
+                                <h3>D</h3>
+                                <h3>E</h3>
+                                <h3>F</h3>
+                                <h3>G</h3>
+                                <h3>H</h3>
+                                <h3>I</h3>
+                                <h3>J</h3>
+                            </div>
+                            <div class=" flex flex-col gap-6 text-xl font-medium ">
+                                <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">
+                                    A1</div>
+                                <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">B1</div>
+                                <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">C1</div>
+                                <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">D1</div>
+                                <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">E1</div>
+                                <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">F1</div>
+                                <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">G1</div>
+                                <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">H1</div>
+                                <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">I1</div>
+                                <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">J1</div>
                             </div>
                             <div class=" flex flex-col gap-6 text-xl font-medium ">
                                 <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">A2</div>
@@ -308,7 +257,7 @@
                             </div>
 
                         </div>
-                        <div class="flex ml-10 lg:gap-5 ">
+                        <div class="flex ml-2 lg:ml-10 lg:gap-5 ">
                             <div class="flex flex-col gap-6 text-xl font-medium ">
                                 <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">A3</div>
                                 <div id="seat" class="btn lg:w-[100px] bg-gray-400 text-xl  font-medium">B3</div>
@@ -380,7 +329,8 @@
                                     type="text" placeholder="Have any coupon?">
                             </div>
                             <div>
-                                <button id="apply-coupon" class="btn w-auto bg-[#1DD100]"> Apply</button>
+                                <button id="apply-coupon" class="btn bg-[#1DD100] w-auto">
+                                    Apply</button>
                             </div>
 
 

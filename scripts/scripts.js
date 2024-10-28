@@ -19,6 +19,7 @@ function homeSection() {
     showTicketSectionByClick('main-section');
 }
 // set bg tickets
+
 const seats = document.querySelectorAll('#seat');
 seats.forEach(seat => {
     seat.addEventListener('click', () => {
@@ -41,17 +42,20 @@ seats.forEach(seat => {
                 const couponCode = 'NEW15';
                 const coupleCouponCode = 'Couple20';
                 if (getCoupon === couponCode) {
+
                     const discount = totalPrice * 15 / 100;
                     const discountedPrice = totalPrice - discount;
                     const grandValue = document.getElementById('grand-value');
                     grandValue.innerText = discountedPrice;
                 }
+
                 if (getCoupon === coupleCouponCode) {
                     const discount = totalPrice * 20 / 100;
                     const discountedPrice = totalPrice - discount;
                     const grandValue = document.getElementById('grand-value');
                     grandValue.innerText = discountedPrice;
                 }
+
 
             })
 
